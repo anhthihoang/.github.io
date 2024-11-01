@@ -4,18 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-   
+    <style>
+        div.at-container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+	}
+	.at-item {
+		width: 100px; height: 100px; background:url(https://bit.ueh.edu.vn/wp-content/uploads/2017/06/BIT_logo.png) no-repeat; 
+		
+		animation-name: bg-pan-tr;
+		animation-duration: 2.2s;
+		animation-timing-function: ease-in;
+		animation-delay: 0s;
+		animation-iteration-count: infinite;
+		animation-direction: reverse;
+		animation-fill-mode: both;
+			
+		/* shorthand
+		animation: bg-pan-tr 22s ease-in 0s 1 reverse both;*/
+	}
+	@keyframes bg-pan-tr {
+			
+		0% {
+			background-position:0 100%;
+		}
+		100% {
+			background-position:100% 0;
+		}
+	}
+        figure {
+            margin-top: 100px;    
+            background-color: blue;
+            width: 200px;                    
+            transform: rotate(45deg);
+        }
+        figure img{
+            transform: translatex(100px) translatey(-30px);
+            filter: grayscale(100%);
+        }
+        figure img {
+            background-color: #146d37;            
+            transition-duration: 2s;
+            transition-timing-function: ease-out;
+            transition-delay: 0s;
+        }
+
+        figure img:hover {
+            background-color: #60b946;
+            width: 150%;
+            animation-play-state: paused;
+        }
+
+        
+        figure {
+            animation-iteration-count: infinite;
+            animation-name: bounceIn;
+            animation-play-state: running;
+            animation-duration: 2s;
+            animation-timing-function: ease-out;
+            animation-delay: 1s;
+        }
+
+
+    </style>
 </head>
 <body>
     <figure>
-        <img width="200"
-        src="https://bit.ueh.edu.vn/
-        
-        wp-
-        content/uploads/2017/06/BIT_
-        
-        logo.png">
+        <img width="200" src="https://bit.ueh.edu.vn/wp-content/uploads/2017/06/BIT_logo.png">
         <figcaption>BIT</figcaption>
-        </figure>
+    </figure>
+    <div class='at-container'>
+        <div class='at-item' ></div>
+    </div>
 </body>
 </html>
